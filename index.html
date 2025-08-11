@@ -1,15 +1,12 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-    <meta charset="UTF-8">
+    <meta charset="UTF-8" />
     <title>FJU</title>
     <style>
         body {
             font-family: Arial, Helvetica, sans-serif;
-            background-image: url(FJU.png);
-            background-size: 600px;
-            background-repeat: no-repeat;
-            background-position: center 150px;
+            /* Fundo removido conforme pedido */
             margin: 0;
             padding: 0;
             text-align: center;
@@ -25,7 +22,28 @@
         }
 
         .links div {
-            margin: 5px 0;
+            width: 80px;
+            height: 80px;
+            margin: 10px 15px 10px 0;
+            display: inline-flex;
+            justify-content: center;
+            align-items: center;
+            background: white;
+            border-radius: 8px;
+            box-sizing: border-box;
+        }
+
+        .links a img {
+            width: 80px !important;
+            height: 80px !important;
+            object-fit: contain;
+            cursor: pointer;
+            transition: transform 0.3s;
+            display: block;
+        }
+
+        .links a img:hover {
+            transform: scale(1.1);
         }
 
         footer {
@@ -44,7 +62,8 @@
             margin: auto;
         }
 
-        input, textarea {
+        input,
+        textarea {
             width: 100%;
             padding: 8px;
             box-sizing: border-box;
@@ -67,13 +86,41 @@
     <h1>Grupos do FJU</h1>
 
     <div class="links">
-        <div><a href="FJU/esporte.html">FJU Esporte</a></div>
-        <div><a href="FJU/universitarios.html">FJU Universitários</a></div>
-        <div><a href="FJU/midia.html">FJU Mídia</a></div>
-        <div><a href="FJU/help.html">FJU Help</a></div>
-        <div><a href="FJU/uniforça.html">FJU Uniforça</a></div>
-        <div><a href="FJU/arcanjos.html">FJU Arcanjos</a></div>
-        <div><a href="FJU/cultura.html">FJU Cultura</a></div>
+        <div>
+            <a href="FJU/esporte.html">
+                <img src="FJU/imagens FJU/FJU Esporte.png" alt="Esportes" />
+            </a>
+        </div>
+        <div>
+            <a href="FJU/universitarios.html">
+                <img src="FJU/imagens FJU/universitarios.png" alt="Universitários" />
+            </a>
+        </div>
+        <div>
+            <a href="FJU/midia.html">
+                <img src="FJU/imagens FJU/Midia.jpeg" alt="Mídia" />
+            </a>
+        </div>
+        <div>
+            <a href="FJU/help.html">
+                <img src="FJU/imagens FJU/help.png" alt="Help" />
+            </a>
+        </div>
+        <div>
+            <a href="FJU/uniforça.html">
+                <img src="FJU/imagens FJU/uniforça.png" alt="Uniforça" />
+            </a>
+        </div>
+        <div>
+            <a href="FJU/arcanjos.html">
+                <img src="FJU/imagens FJU/arcanjos.png" alt="Arcanjos" />
+            </a>
+        </div>
+        <div>
+            <a href="FJU/cultura.html">
+                <img src="FJU/imagens FJU/cultura.png" alt="Cultura" />
+            </a>
+        </div>
     </div>
 
     <footer>
@@ -100,9 +147,9 @@
                 <p>Mensagem:</p>
                 <textarea name="mensagem" placeholder="Digite a sua mensagem" rows="5" required></textarea>
             </div>
-            
-            <input type="hidden" name="_captcha" value="false">
-            <input type="hidden" name="_next" value="https://jheansantanam.github.io/Site-FJU/obrigado.html">
+
+            <input type="hidden" name="_captcha" value="false" />
+            <input type="hidden" name="_next" value="https://jheansantanam.github.io/Site-FJU/obrigado.html" />
 
             <button type="submit">Enviar Mensagem</button>
         </form>
