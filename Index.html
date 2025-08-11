@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>FJU</title>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background-image: url(FJU.png);
+            background-size: 600px;
+            background-repeat: no-repeat;
+            background-position: center 150px;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+        }
+
+        h1 {
+            margin-top: 20px;
+            color: rgb(0, 0, 0);
+        }
+
+        .links {
+            margin-top: 30px;
+        }
+
+        .links div {
+            margin: 5px 0;
+        }
+
+        footer {
+            background: #f5deb3;
+            padding: 20px;
+            margin-top: 50px;
+        }
+
+        .grupo {
+            margin-bottom: 10px;
+            text-align: left;
+        }
+
+        form {
+            max-width: 400px;
+            margin: auto;
+        }
+
+        input, textarea {
+            width: 100%;
+            padding: 8px;
+            box-sizing: border-box;
+        }
+
+        button {
+            padding: 10px 15px;
+            background: rgb(0, 0, 0);
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background: rgb(0, 0, 0);
+        }
+    </style>
+</head>
+<body>
+    <h1>Grupos do FJU</h1>
+
+    <div class="links">
+        <div><a href="FJU/esporte.html">FJU Esporte</a></div>
+        <div><a href="FJU/universitarios.html">FJU Universitários</a></div>
+        <div><a href="FJU/midia.html">FJU Mídia</a></div>
+        <div><a href="FJU/help.html">FJU Help</a></div>
+        <div><a href="FJU/uniforça.html">FJU Uniforça</a></div>
+        <div><a href="FJU/arcanjos.html">FJU Arcanjos</a></div>
+        <div><a href="FJU/cultura.html">FJU Cultura</a></div>
+    </div>
+
+    <footer>
+        <h2>Fale Conosco</h2>
+        <p>Entre em contato conosco preenchendo o formulário abaixo. Responderemos o mais rápido possível!</p>
+
+        <form action="https://formsubmit.co/jheansmiranda@gmail.com" method="POST">
+            <div class="grupo">
+                <p>Nome:</p>
+                <input type="text" name="nome" placeholder="Digite o seu nome completo" required />
+            </div>
+
+            <div class="grupo">
+                <p>Email:</p>
+                <input type="email" name="email" placeholder="Digite o seu email" required />
+            </div>
+
+            <div class="grupo">
+                <p>Telefone:</p>
+                <input type="tel" name="telefone" placeholder="Digite o seu telefone" required />
+            </div>
+
+            <div class="grupo">
+                <p>Mensagem:</p>
+                <textarea name="mensagem" placeholder="Digite a sua mensagem" rows="5" required></textarea>
+            </div>
+            
+            <input type="hidden" name="_captcha" value="false">
+            <input type="hidden" name="_next" value="https://jheansantanam.github.io/Site-FJU/obrigado.html">
+
+            <button type="submit">Enviar Mensagem</button>
+        </form>
+
+        <p class="direitos-autorais">&copy; 2025 - Força Jovem Universal - Todos Direitos Reservados</p>
+    </footer>
+</body>
+</html>
