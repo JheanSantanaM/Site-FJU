@@ -1,41 +1,95 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-    <meta charset="UTF-8">
-    <title>FJU Esporte</title>
-    <style>
-        body {
-            font-family: Arial, Helvetica, sans-serif;
-            background-color: green;
-        }
-    </style>
-    <h1>SOBRE O PROJETO ESPORTE:</h1>
-    <p>
-         O projeto Esportes FJU (Força Jovem Universal) é uma iniciativa que visa promover a prática esportiva entre os jovens,
-         utilizando o esporte como ferramenta de transformação social e desenvolvimento pessoal. 
-         Ele faz parte de um conjunto de projetos da FJU que buscam despertar talentos,
-         promover a inclusão e oferecer oportunidades para os jovens. 
-    </p>
-    <h2>Principais objetivos e atividades:</h2>
-    <p>
-        Inclusão social:
-O projeto busca democratizar o acesso ao esporte, oferecendo atividades para jovens de diferentes realidades, incluindo aqueles em situação de vulnerabilidade. 
-Desenvolvimento pessoal:
-Através do esporte, a FJU busca promover valores como disciplina, trabalho em equipe, respeito e superação, contribuindo para a formação de caráter e cidadania. 
-Atividades diversificadas:
-O projeto oferece uma variedade de modalidades esportivas, como futebol, futsal, basquete, vôlei, jiu-jítsu, entre outras, tanto em competições quanto em atividades de lazer. 
-Eventos e circuitos:
-A FJU realiza eventos como o "Circuito Esportes", um evento mensal que visa promover a participação em atividades esportivas. 
-Parcerias:
-O projeto conta com parcerias com outras instituições, como o Instituto Pró-Família e a Secretaria de Esportes de São Paulo, para a realização de eventos como o "Esporte Jovem". 
-    </p>
-    <h2>Como participar:</h2>
-    <p>
-        Para participar das atividades do projeto Esportes FJU,
-        basta procurar um polo da FJU mais próximo da sua região e se informar sobre as atividades disponíveis,
-        segundo o site da Força Jovem Universal.
-    </p>
-    <img src="imagens FJU/FJU Esporte.png">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FJU Esporte</title>
+  <style>
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      background-color: rgb(36, 227, 36);
+      margin: 20px;
+      padding: 0;
+      color: #000;
+    }
+
+    h1, h2, h3 {
+      margin-top: 0;
+    }
+
+    .video-container {
+      display: flex;
+      gap: 20px;
+      flex-wrap: wrap;
+      margin-top: 20px;
+    }
+
+    .video-item {
+      flex: 1 1 300px; 
+      max-width: 560px;
+    }
+
+    .video-item iframe {
+      width: 100%;
+      height: 315px;
+      border: none;
+    }
+
+    @media (max-width: 600px) {
+      .video-container {
+        flex-direction: column; 
+      }
+      .video-item iframe {
+        height: 200px; 
+      }
+    }
+
+    p {
+      line-height: 1.6;
+    }
+  </style>
 </head>
 <body>
-    
+
+  <h1>SOBRE O PROJETO ESPORTE:</h1>
+  <p>
+    O projeto Esportes FJU (Força Jovem Universal) é uma iniciativa que visa promover a prática esportiva entre os jovens,
+    utilizando o esporte como ferramenta de transformação social e desenvolvimento pessoal. Ele faz parte de um conjunto de projetos
+    da FJU que buscam despertar talentos, promover a inclusão e oferecer oportunidades para os jovens.
+  </p>
+
+  <h2>Vídeos do projeto:</h2>
+  <div class="video-container">
+    <div class="video-item">
+      <h3>Melhores momentos – Projeto Esporte Jovem 2024</h3>
+      <iframe src="https://www.youtube.com/embed/BRJ16Rjm1P0" 
+              title="Melhores momentos Projeto Esporte Jovem 2024"
+              allowfullscreen>
+      </iframe>
+    </div>
+    <div class="video-item">
+      <h3>Institucional – VOCÊ CONHECE O PROJETO ESPORTES FJU?</h3>
+      <iframe src="https://www.youtube.com/embed/gVqt_sCuelQ"
+              title="Você conhece o Projeto Esportes FJU? (Institucional 2024)"
+              allowfullscreen>
+      </iframe>
+    </div>
+  </div>
+
+  <h2>Principais objetivos e atividades:</h2>
+  <p>
+    Inclusão social: o projeto democratiza o acesso ao esporte, oferecendo atividades para jovens de diferentes realidades,
+    inclusive em situação de vulnerabilidade.<br>
+    Desenvolvimento pessoal: promove valores como disciplina, trabalho em equipe, respeito e superação.<br>
+    Atividades diversificadas: futebol, futsal, basquete, vôlei, jiu-jítsu, entre outras, em competições e lazer.<br>
+    Eventos e circuitos: como o “Circuito Esportes”, evento mensal que promove participação esportiva.<br>
+    Parcerias: com instituições como o Instituto Pró-Família e a Secretaria de Esportes de São Paulo, em eventos como o “Esporte Jovem”.
+  </p>
+
+  <h2>Como participar:</h2>
+  <p>
+    Para participar das atividades, basta procurar o polo da FJU mais próximo e se informar sobre as atividades disponíveis, segundo o site da Força Jovem Universal.
+  </p>
+
+</body>
+</html>
