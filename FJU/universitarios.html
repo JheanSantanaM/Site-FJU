@@ -1,48 +1,88 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-    <meta charset="UTF-8">
-    <title>FJU Universitários</title>
-    <style>
-        body {
-            font-family: Arial, Helvetica, sans-serif;
-            background-color: red;
-        }
-    </style>
-    <h1>SOBRE O PROJETO UNIVERSITÁRIOS</h1>
-    <p>
-        O FJU Universitários é um projeto da Força Jovem Universal (FJU) destinado a jovens que estão cursando ou pretendem cursar o ensino superior.
-        O objetivo principal é estimular o lado pessoal, intelectual, profissional e espiritual dos jovens, oferecendo atividades como grupos de estudo,
-        feiras vocacionais, ações sociais e encontros mensais de acordo com a Força Jovem Universal. 
-    </p>
-    <h2>O que o FJU Universitários oferece:</h2>
-    <p>
-        Grupos de estudo: Para auxiliar no aprendizado e desenvolvimento acadêmico. 
-    </p>
-    <p>
-        Feiras vocacionais: Para ajudar os jovens a escolherem suas carreiras. 
-    </p>
-    <p>
-        Ações sociais: Para promover a cidadania e o engajamento social. 
-    </p>
-    <p>
-        Encontros mensais: Para promover a interação e o networking entre os participantes conforme informações do projeto. 
-    </p>
-    <p>
-        Cursos de idiomas: Em algumas unidades da FJU, são oferecidos cursos de inglês, francês,
-        espanhol e alemão para jovens de 15 a 25 anos de acordo com o Instagram da FJU. 
-    </p>
-    <p>
-        Aulas de preparação para o ENEM: Em algumas localidades, o FJU Universitários oferece aulas gratuitas para ajudar os jovens a 
-        se prepararem para o Exame Nacional do Ensino Médio. 
-    </p>
-    <p>
-        Em resumo, o FJU Universitários é um projeto abrangente que visa apoiar os jovens em sua jornada acadêmica,
-        profissional e espiritual, oferecendo diversas ferramentas e oportunidades para o seu desenvolvimento. 
-    </p>
-    <img src="imagens FJU/universitarios.png">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FJU Universitários</title>
+  <style>
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      background-color: rgb(179, 46, 46);
+      margin: 20px;
+      color: white;
+    }
+    .video-container {
+      display: flex;
+      gap: 20px;
+      flex-wrap: wrap;
+      margin-top: 20px;
+    }
+    .video-item {
+      flex: 1 1 300px;
+      max-width: 560px;
+    }
+    .video-item iframe {
+      width: 100%;
+      height: 315px;
+    }
+    h1, h2, h3 {
+      color: #fff;
+    }
+
+   
+    @media (max-width: 600px) {
+      body {
+        margin: 10px;
+      }
+      .video-container {
+        flex-direction: column;
+        gap: 15px;
+      }
+      .video-item iframe {
+        height: 200px; 
+      }
+    }
+  </style>
 </head>
 <body>
-    
+  <h1>SOBRE O PROJETO UNIVERSITÁRIOS</h1>
+  <p>
+    O FJU Universitários é um projeto da Força Jovem Universal (FJU) destinado a jovens que estão cursando ou pretendem cursar o ensino superior.
+    O objetivo principal é estimular o lado pessoal, intelectual, profissional e espiritual dos jovens, oferecendo atividades como grupos de estudo,
+    feiras vocacionais, ações sociais e encontros mensais.
+  </p>
+
+  <h2>O que o FJU Universitários oferece:</h2>
+  <ul>
+    <li>Grupos de estudo: Para auxiliar no aprendizado e desenvolvimento acadêmico.</li>
+    <li>Feiras vocacionais: Para ajudar os jovens a escolher suas carreiras.</li>
+    <li>Ações sociais: Para promover a cidadania e o engajamento social.</li>
+    <li>Encontros mensais: Para promover a interação e o networking entre os participantes.</li>
+    <li>Cursos de idiomas: Em algumas unidades da FJU são oferecidos cursos de inglês, francês, espanhol e alemão para jovens de 15 a 25 anos.</li>
+    <li>Aulas de preparação para o ENEM: Em algumas localidades, o projeto oferece aulas gratuitas para ajudar na preparação para o exame.</li>
+  </ul>
+  <p>
+    Em resumo, o FJU Universitários é um projeto abrangente que visa apoiar os jovens em sua jornada acadêmica, profissional e espiritual, oferecendo diversas ferramentas e oportunidades para o seu desenvolvimento.
+  </p>
+
+  <h2>Vídeos sobre o projeto</h2>
+  <div class="video-container">
+    <div class="video-item">
+      <h3>Conheça o projeto FJU Universitários</h3>
+      <iframe 
+        src="https://www.youtube.com/embed/u7q9nWwxomE"
+        title="CONHEÇA O PROJETO FJUNIVERSITÁRIOS"
+        frameborder="0" allowfullscreen>
+      </iframe>
+    </div>
+    <div class="video-item">
+      <h3>FJUni em ação no dia do ENEM (Floripa 2024)</h3>
+      <iframe 
+        src="https://www.youtube.com/embed/3EE7UYSBr6A"
+        title="FJU Universitários ação no ENEM 2024 Floripa"
+        frameborder="0" allowfullscreen>
+      </iframe>
+    </div>
+  </div>
 </body>
 </html>
