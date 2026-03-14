@@ -3,77 +3,33 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Projeto Atalaia</title>
+    <title>Atalaia FJU</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
     <style>
-        body {
-            font-family: Arial, Helvetica, sans-serif;
-            background-color: rgb(194, 79, 79);
-            margin: 0;
-            padding: 20px;
-            color: #fff;
-        }
-
-        h1, h2, h3 {
-            margin-top: 0;
-        }
-
-        p, ul {
-            line-height: 1.6;
-        }
-
-        ul li {
-            margin-bottom: 10px;
-        }
-
-        .video-container {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 20px;
-            justify-content: center;
-            margin-top: 20px;
-        }
-
-        iframe {
-            width: 100%;
-            max-width: 560px;
-            aspect-ratio: 16/9;
-            border: none;
-        }
-
-        @media (max-width: 600px) {
-            iframe {
-                height: auto;
-            }
-        }
+        :root { --cor-tema: #e74c3c; --gradiente: linear-gradient(135deg, #e74c3c, #c0392b); }
+        body { font-family: 'Poppins', sans-serif; background: #fff5f4; margin: 0; }
+        .hero { background: var(--gradiente); padding: 60px 20px; color: white; text-align: center; border-radius: 0 0 50px 50px; }
+        .container { max-width: 900px; margin: -50px auto 50px; background: white; padding: 40px; border-radius: 30px; box-shadow: 0 20px 50px rgba(0,0,0,0.1); }
+        .video-wrapper { position: relative; padding-bottom: 56.25%; height: 0; margin: 30px 0; border-radius: 20px; overflow: hidden; }
+        .video-wrapper iframe { position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: none; }
+        .btn-voltar { display: inline-block; background: #2c3e50; color: white; padding: 12px 30px; border-radius: 50px; cursor: pointer; border: none; font-weight: bold; margin-bottom: 20px; }
     </style>
 </head>
 <body>
-
-<h1>PROJETO ATALAIA</h1>
-<p>Evangelizando e acolhendo jovens para Cristo</p>
-
-<h2>Sobre o Projeto Atalaia</h2>
-<p>
-    O projeto Atalaia, dentro da Força Jovem Universal (FJU), é um grupo de jovens e obreiros dedicados à evangelização, com o objetivo de atrair outros jovens para a Igreja Universal.
-    Eles realizam ações nas ruas e em visitas domiciliares, buscando alcançar aqueles que precisam de ajuda e orientação espiritual.
-</p>
-<p>
-    O nome "Atalaia" faz referência a um vigia que alerta sobre perigos. No contexto da FJU,
-    os Atalaias são vistos como aqueles que vigiam e cuidam dos outros jovens, oferecendo apoio e acolhimento, além de levar a mensagem da igreja.
-</p>
-
-<h3>Em resumo, o projeto Atalaia da FJU é:</h3>
-<ul>
-    <li><strong>Um grupo de evangelização:</strong> Os membros do Atalaia têm o compromisso de levar a palavra de Deus e a mensagem da FJU aos jovens.</li>
-    <li><strong>Um projeto de acolhimento:</strong> Eles se esforçam para receber bem os novos membros e oferecer suporte aos que já fazem parte da FJU.</li>
-    <li><strong>Uma ação de resgate:</strong> Os Atalaias buscam alcançar jovens que estão passando por dificuldades, oferecendo uma alternativa e esperança.</li>
-</ul>
-
-<h2>Vídeos sobre o Projeto Atalaia</h2>
-<div class="video-container">
-    <iframe src="https://www.youtube.com/embed/A67Td7AqHJg" title="SE TEM FJU, O PROJETO ATALAIA TÁ LÁ!" allowfullscreen></iframe>
-    <iframe src="https://www.youtube.com/embed/4TCGehEYk4w" title="Atalaia FJU Londrina" allowfullscreen></iframe>
-</div>
-
+    <div class="hero">
+        <i class="fas fa-bullhorn fa-4x"></i>
+        <h1>ATALAIA</h1>
+    </div>
+    <div class="container">
+        <button onclick="window.history.back()" class="btn-voltar"><i class="fas fa-arrow-left"></i> Voltar</button>
+        <div class="info-section" style="border-left: 5px solid var(--cor-tema); padding-left: 20px;">
+            <h2>Linha de Frente</h2>
+            <p>O <strong>Atalaia</strong> é o grupo que vai onde ninguém quer ir: ruas, comunidades e locais de risco para convidar jovens a conhecerem uma nova vida. São evangelizadores dedicados ao resgate imediato.</p>
+        </div>
+        <div class="video-wrapper">
+            <iframe src="https://www.youtube.com/embed/A67Td7AqHJg" allowfullscreen></iframe>
+        </div>
+    </div>
 </body>
 </html>

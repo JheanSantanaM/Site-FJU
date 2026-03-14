@@ -1,87 +1,35 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Projeto Arcanjos</title>
-<style>
-    body {
-        font-family: Arial, Helvetica, sans-serif;
-        background-color: cyan;
-        margin: 20px;
-        color: #000;
-    }
-
-    h1, h2, h3 {
-        margin-top: 0;
-    }
-
-    p {
-        line-height: 1.6;
-    }
-
-    .video-container {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 20px;
-        margin-top: 20px;
-        justify-content: center;
-        align-items: flex-start; 
-    }
-
-    .video-item {
-        flex: 1 1 300px;
-        max-width: 560px;
-        display: flex;
-        flex-direction: column;
-        gap: 10px;
-    }
-
-    .video-item h3 {
-        min-height: 60px; 
-    }
-
-    .video-item iframe {
-        width: 100%;
-        aspect-ratio: 16/9; 
-        border: none;
-    }
-
- 
-    @media (max-width: 600px) {
-        .video-container {
-            flex-direction: column;
-            align-items: center;
-        }
-        .video-item iframe {
-            height: auto;
-        }
-    }
-</style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arcanjos FJU</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <style>
+        :root { --cor-tema: #3498db; --gradiente: linear-gradient(135deg, #3498db, #2980b9); }
+        body { font-family: 'Poppins', sans-serif; background: #f0f8ff; margin: 0; }
+        .hero { background: var(--gradiente); padding: 60px 20px; color: white; text-align: center; border-radius: 0 0 50px 50px; }
+        .container { max-width: 900px; margin: -50px auto 50px; background: white; padding: 40px; border-radius: 30px; }
+        .video-wrapper { position: relative; padding-bottom: 56.25%; height: 0; margin: 30px 0; border-radius: 20px; overflow: hidden; }
+        .video-wrapper iframe { position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: none; }
+        .btn-voltar { display: inline-block; background: var(--cor-tema); color: white; padding: 12px 30px; border-radius: 50px; cursor: pointer; border: none; font-weight: bold; margin-bottom: 20px; }
+    </style>
 </head>
 <body>
-
-<h1>SOBRE O PROJETO ARCANJOS</h1>
-<p>
-    O FJU Arcanjo é um projeto dentro da Força Jovem Universal (FJU) que se dedica a resgatar jovens que se afastaram da igreja ou que estão passando por dificuldades, levando-os de volta à fé e oferecendo apoio. O projeto busca alcançar aqueles que estão perdidos, oferecendo uma palavra de esperança e lembrando-os de que são valorizados.
-</p>
-
-<h2>Elaboração:</h2>
-<p>
-    O FJU (Força Jovem Universal) é um grupo ligado à Igreja Universal do Reino de Deus que visa alcançar jovens com problemas de diversas naturezas, como vícios, criminalidade, dificuldades familiares e falta de perspectiva de vida, ajudando-os a encontrar um novo caminho. O Projeto Arcanjo, dentro da FJU, tem como objetivo específico resgatar jovens que se afastaram da igreja ou que estão enfrentando desafios que os afastaram da fé. Os voluntários do projeto realizam visitas, oferecem orações e buscam levar uma mensagem de esperança e apoio aos jovens. O nome "Arcanjo" faz referência à ideia de um "mensageiro especial" ou "autoridade espiritual", refletindo o papel dos voluntários em buscar e resgatar esses jovens. O projeto reforça a mensagem de que a FJU se importa com eles e que há um lugar para eles na igreja e na comunidade. Em resumo, o FJU Arcanjo é um projeto de resgate dentro da FJU, focado em jovens que se afastaram da igreja ou que precisam de apoio espiritual e emocional.
-</p>
-
-<h2>Vídeos do projeto:</h2>
-<div class="video-container">
-    <div class="video-item">
-        <h3>CONHEÇA O PROJETO ARCANJOS FJU | SEM LIMITES PARA SALVAR</h3>
-        <iframe src="https://www.youtube.com/embed/zCmWs21nytI" title="CONHEÇA O PROJETO ARCANJOS FJU | SEM LIMITES PARA SALVAR" allowfullscreen></iframe>
+    <div class="hero">
+        <i class="fas fa-user-shield fa-4x"></i>
+        <h1>ARCANJOS</h1>
     </div>
-    <div class="video-item">
-        <h3>PLANTÃO FJU - ARCANJOS EM AÇÃO</h3>
-        <iframe src="https://www.youtube.com/embed/HiaFqbsMGqE" title="PLANTÃO FJU - ARCANJOS EM AÇÃO" allowfullscreen></iframe>
+    <div class="container">
+        <button onclick="window.history.back()" class="btn-voltar"><i class="fas fa-arrow-left"></i> Voltar</button>
+        <div class="info-section" style="border-left: 5px solid var(--cor-tema); padding-left: 20px;">
+            <h2>Resgate e Acolhimento</h2>
+            <p>O <strong>Arcanjos</strong> tem a missão especial de visitar jovens que um dia estiveram na presença de Deus mas se afastaram. Com amor e dedicação, eles buscam trazer esses jovens de volta à fé.</p>
+        </div>
+        <div class="video-wrapper">
+            <iframe src="https://www.youtube.com/embed/zCmWs21nytI" allowfullscreen></iframe>
+        </div>
     </div>
-</div>
-
 </body>
 </html>

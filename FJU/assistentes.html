@@ -1,68 +1,50 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Projeto Assistentes</title>
-<style>
-    body {
-        font-family: Arial, Helvetica, sans-serif;
-        background-color: lightcoral;
-        margin: 20px;
-        color: #000;
-    }
-
-    h1, h2, h3 {
-        margin-top: 0;
-    }
-
-    p {
-        line-height: 1.6;
-    }
-
-    .video-container {
-        display: flex;
-        justify-content: center;
-        margin-top: 20px;
-    }
-
-    iframe {
-        width: 100%;
-        max-width: 560px;
-        aspect-ratio: 16/9;
-        border: none;
-    }
-
-    @media (max-width: 600px) {
-        iframe {
-            height: auto;
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assistentes FJU</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <style>
+        :root { 
+            /* Cor Rosa Oficial dos Assistentes */
+            --cor-tema: #ff007f; 
+            --gradiente: linear-gradient(135deg, #ff007f, #ff5e62); 
         }
-    }
-</style>
+        body { font-family: 'Poppins', sans-serif; background: #fff5f8; margin: 0; color: #333; }
+        .hero { background: var(--gradiente); padding: 60px 20px; color: white; text-align: center; border-radius: 0 0 50px 50px; box-shadow: 0 10px 30px rgba(255, 0, 127, 0.2); }
+        .container { max-width: 900px; margin: -50px auto 50px; background: white; padding: 40px; border-radius: 30px; box-shadow: 0 20px 50px rgba(0,0,0,0.1); }
+        .video-wrapper { position: relative; padding-bottom: 56.25%; height: 0; margin: 30px 0; border-radius: 20px; overflow: hidden; box-shadow: 0 10px 20px rgba(0,0,0,0.2); border: 3px solid var(--cor-tema); }
+        .video-wrapper iframe { position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: none; }
+        .btn-voltar { display: inline-block; background: #333; color: white; padding: 12px 30px; border-radius: 50px; text-decoration: none; font-weight: bold; margin-bottom: 20px; cursor: pointer; border: none; transition: 0.3s; }
+        .btn-voltar:hover { background: var(--cor-tema); transform: scale(1.05); }
+        h1 { font-weight: 800; text-transform: uppercase; letter-spacing: 2px; margin: 10px 0; }
+        .info-section { border-left: 5px solid var(--cor-tema); padding-left: 20px; text-align: justify; }
+        .destaque { color: var(--cor-tema); font-weight: 600; }
+    </style>
 </head>
 <body>
+    <div class="hero">
+        <i class="fas fa-heart fa-4x"></i>
+        <h1>ASSISTENTES FJU</h1>
+        <p>O prazer de servir e cuidar da sua alma.</p>
+    </div>
+    <div class="container">
+        <button onclick="window.history.back()" class="btn-voltar">
+            <i class="fas fa-arrow-left"></i> Voltar
+        </button>
 
-<h1>SOBRE O PROJETO ASSISTENTES</h1>
-<p>
-    O FJU Assistentes é um projeto da Força Jovem Universal (FJU), formado por jovens voluntários que apoiam a coordenação da FJU,
-    promovendo o crescimento pessoal e espiritual dos participantes. Eles organizam eventos,
-    realizam visitas e oferecem orientação, criando um ambiente acolhedor e enriquecedor para outros jovens.
-</p>
+        <div class="info-section">
+            <h2>O Coração da FJU</h2>
+            <p>O grupo de <span class="destaque">Assistentes</span> é formado por jovens que dedicam o seu tempo para cuidar do próximo. Eles são o suporte espiritual em todas as reuniões e eventos, sempre prontos para dar uma palavra de fé.</p>
+            <p>A principal característica de um assistente é o <span class="destaque">amor pelas almas</span>. Eles acolhem cada jovem que entra na FJU, oferecendo um ombro amigo e uma orientação espiritual para aqueles que sofrem com problemas internos, familiares ou vazios existenciais.</p>
+            <p>Ser um assistente é mais que um cargo, é um privilégio de servir no altar e ajudar a transformar vidas através do poder de Deus.</p>
+        </div>
 
-<h2>Em resumo, o FJU Assistentes:</h2>
-<p>É um projeto de voluntariado: Jovens se dedicam a ajudar na organização e execução das atividades da FJU.</p>
-<p>Foca no desenvolvimento pessoal e espiritual: O objetivo é oferecer apoio e orientação para que outros jovens cresçam nesses aspectos.</p>
-<p>Promove um ambiente acolhedor: Cria um espaço onde os jovens se sintam confortáveis e apoiados.</p>
-
-<h2>Outros pontos importantes sobre o FJU Assistentes:</h2>
-<p>Eles podem ser vistos como "braços direitos" da coordenação da FJU, auxiliando em diversas áreas.</p>
-<p>O projeto pode envolver atividades como a organização de eventos, a realização de visitas a jovens e a oferta de aconselhamento.</p>
-<p>É uma forma de engajamento e participação ativa na FJU, permitindo que os jovens contribuam para a comunidade e para o crescimento de outros jovens.</p>
-
-<h2>Vídeo do projeto:</h2>
-<div class="video-container">
-    <iframe src="https://www.youtube.com/embed/tKsndrQyiB8" title="ASSISTENTES FJU - NAMORO BLINDADO IN CONCERT - 2020" allowfullscreen></iframe>
-</div>
-
+        <div class="video-wrapper">
+            <iframe src="https://www.youtube.com/embed/zCmWs21nytI" allowfullscreen></iframe>
+        </div>
+    </div>
 </body>
 </html>

@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FJU - Força Jovem Universal</title>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+    <style>
+        /* Variáveis de Cores Baseadas na Identidade FJU */
+        :root {
+            --azul-escuro: #1A1C29; /* Cor baseada no logotipo */
+            --azul-claro: #2A2D43;
+            --vermelho-fju: #E63946;
+            --fundo-site: #F4F7F6;
+            --branco: #FFFFFF;
+            --texto-escuro: #333333;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: var(--fundo-site);
+            color: var(--texto-escuro);
+            text-align: center;
+        }
+
+        /* Cabeçalho */
+        header {
+            padding: 40px 20px 20px;
+        }
+
+        header img {
+            max-width: 250px;
+            margin-bottom: 10px;
+        }
+
+        h1 {
+            color: var(--azul-escuro);
+            font-weight: 700;
+            font-size: 2.5rem;
+            margin-bottom: 5px;
+        }
+
+        p.subtitle {
+            color: #666;
+            margin-bottom: 40px;
+            font-size: 1.1rem;
+        }
+
+        /* Grid de Projetos/Grupos */
+        .links {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
+            gap: 20px;
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .links div {
+            background: var(--branco);
+            border-radius: 15px;
+            padding: 20px;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
+            transition: all 0.3s ease;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .links div:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 15px 25px rgba(0, 0, 0, 0.1);
+            border-bottom: 4px solid var(--vermelho-fju);
+        }
+
+        .links a {
+            display: block;
+            width: 100%;
+            height: 100%;
+        }
+
+        .links a img {
+            width: 80px;
+            height: 80px;
+            object-fit: contain;
+            transition: transform 0.3s ease;
+        }
+
+        /* Rodapé Melhorado */
+        footer {
+            background: var(--azul-escuro);
+            color: var(--branco);
+            padding: 50px 20px 20px;
+            margin-top: 80px;
+            border-radius: 30px 30px 0 0;
+            box-shadow: 0 -10px 30px rgba(0,0,0,0.1);
+        }
+
+        .footer-container {
+            max-width: 1000px;
+            margin: 0 auto;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            gap: 40px;
+            text-align: left;
+        }
+
+        .fale-conosco {
+            flex: 1 1 400px;
+        }
+
+        .fale-conosco h2 {
+            margin-top: 0;
+            color: var(--branco);
+            font-size: 1.8rem;
+            border-bottom: 3px solid var(--vermelho-fju);
+            display: inline-block;
+            padding-bottom: 5px;
+        }
+
+        form {
+            background: var(--azul-claro);
+            padding: 25px;
+            border-radius: 15px;
+            margin-top: 20px;
+        }
+
+        .grupo {
+            margin-bottom: 15px;
+        }
+
+        .grupo p {
+            margin: 0 0 5px 0;
+            font-size: 0.9rem;
+            font-weight: 600;
+        }
+
+        input, textarea {
+            width: 100%;
+            padding: 12px;
+            border-radius: 8px;
+            border: 1px solid transparent;
+            background: #f0f0f0;
+            font-family: 'Poppins', sans-serif;
+            box-sizing: border-box;
+            transition: border 0.3s;
+        }
+
+        input:focus, textarea:focus {
+            outline: none;
+            border: 1px solid var(--vermelho-fju);
+            background: var(--branco);
+        }
+
+        button {
+            width: 100%;
+            padding: 15px;
+            background: var(--vermelho-fju);
+            color: var(--branco);
+            border: none;
+            border-radius: 8px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: background 0.3s, transform 0.2s;
+        }
+
+        button:hover {
+            background: #c52838;
+            transform: scale(1.02);
+        }
+
+        /* Redes Sociais */
+        .redes-sociais {
+            display: flex;
+            flex-direction: row;
+            align-items: flex-start;
+            gap: 15px;
+            padding-top: 20px;
+        }
+
+        .redes-sociais a {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            font-size: 24px;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+        }
+
+        .redes-sociais a.instagram { background: radial-gradient(circle at 30% 30%, #feda75, #d62976, #962fbf, #4f5bd5); }
+        .redes-sociais a.facebook { background: #1877f2; }
+        .redes-sociais a.youtube { background: #ff0000; }
+        .redes-sociais a.twitter { background: #1da1f2; }
+
+        .redes-sociais a:hover {
+            transform: translateY(-5px) scale(1.1);
+            filter: brightness(1.2);
+        }
+
+        .direitos-autorais {
+            margin-top: 50px;
+            padding-top: 20px;
+            border-top: 1px solid rgba(255,255,255,0.1);
+            font-size: 14px;
+            color: #aaa;
+            text-align: center;
+            width: 100%;
+        }
+
+        /* Responsividade para Celulares */
+        @media (max-width: 600px) {
+            .footer-container {
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
+            }
+            .redes-sociais {
+                justify-content: center;
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Projetos FJU</h1>
+        <p class="subtitle">Selecione um dos projetos abaixo para saber mais</p>
+    </header>
+
+    <main class="links">
+        <div>
+            <a href="FJU/esporte.html"><img src="FJU/imagens FJU/esporte.png" alt="Esportes" /></a>
+        </div>
+        <div>
+            <a href="FJU/universitarios.html"><img src="FJU/imagens FJU/universitarios.png" alt="Universitários" /></a>
+        </div>
+        <div>
+            <a href="FJU/midia.html"><img src="FJU/imagens FJU/Midia.jpeg" alt="Mídia" /></a>
+        </div>
+        <div>
+            <a href="FJU/help.html"><img src="FJU/imagens FJU/helpwhite.png" alt="Help" /></a>
+        </div>
+        <div>
+            <a href="FJU/uniforça.html"><img src="FJU/imagens FJU/uniforça.png" alt="Uniforça" /></a>
+        </div>
+        <div>
+            <a href="FJU/arcanjos.html"><img src="FJU/imagens FJU/arcanjos.png" alt="Arcanjos" /></a>
+        </div>
+        <div>
+            <a href="FJU/cultura.html"><img src="FJU/imagens FJU/cultura.png" alt="Cultura" /></a>
+        </div>
+        <div>
+            <a href="FJU/assistentes.html"><img src="FJU/imagens FJU/ASSISTENTES.png" alt="Assistentes" /></a>
+        </div>
+        <div>
+            <a href="FJU/atalaia.html"><img src="FJU/imagens FJU/ATALAIA.png" alt="Atalaia" /></a>
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-container">
+            <div class="fale-conosco">
+                <h2>Fale Conosco</h2>
+                <p>Preencha os dados abaixo. Nossa equipe responderá o mais rápido possível!</p>
+
+                <form action="https://formsubmit.co/jheansmiranda@gmail.com" method="POST">
+                    <div class="grupo">
+                        <p>Nome Completo:</p>
+                        <input type="text" name="nome" placeholder="Ex: João da Silva" required />
+                    </div>
+
+                    <div class="grupo">
+                        <p>E-mail:</p>
+                        <input type="email" name="email" placeholder="seuemail@exemplo.com" required />
+                    </div>
+
+                    <div class="grupo">
+                        <p>WhatsApp / Telefone:</p>
+                        <input type="tel" name="telefone" placeholder="(XX) XXXXX-XXXX" required />
+                    </div>
+
+                    <div class="grupo">
+                        <p>Como podemos ajudar?</p>
+                        <textarea name="mensagem" placeholder="Digite sua mensagem aqui..." rows="4" required></textarea>
+                    </div>
+
+                    <input type="hidden" name="_captcha" value="false" />
+                    <input type="hidden" name="_next" value="https://jheansantanam.github.io/Site-FJU/obrigado.html" />
+
+                    <button type="submit">Enviar Mensagem <i class="fas fa-paper-plane"></i></button>
+                </form>
+            </div>
+
+            <div>
+                <h2 style="color: var(--branco); font-size: 1.8rem; border-bottom: 3px solid var(--vermelho-fju); display: inline-block; margin-top: 0;">Siga a FJU</h2>
+                <div class="redes-sociais">
+                    <a href="https://instagram.com/oficialfju" target="_blank" class="instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="https://facebook.com/forcajovemuniversal" target="_blank" class="facebook"><i class="fab fa-facebook"></i></a>
+                    <a href="https://youtube.com/@forcajovemuniversal" target="_blank" class="youtube"><i class="fab fa-youtube"></i></a>
+                    <a href="https://twitter.com/forcajovem" target="_blank" class="twitter"><i class="fab fa-twitter"></i></a>
+                </div>
+            </div>
+        </div>
+
+        <p class="direitos-autorais">&copy; 2025 - Força Jovem Universal - Todos os Direitos Reservados</p>
+    </footer>
+</body>
+</html>
